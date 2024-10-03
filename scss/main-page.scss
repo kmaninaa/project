@@ -1,0 +1,93 @@
+$rose-button : #FF3E79;
+$background-color: #F8F8F8;
+$background-color-secondary: #FFFFFF;
+$border-color: #D9FFF5;
+$highlight-color: #B8FFEC;
+$text-color-primary: #1B1C21;
+$text-color-secondary: #7E7E82;
+$font-size: 14px;
+$font-size-secondary: 16px;
+$font-size--h1: 28px;
+$font-size--h2: 24px;
+$font-weight--medium: 500;
+$font-weight--bold: bold;
+
+.main-page {
+    background-color: $background-color;
+    font-family: 'TT Lakes';
+    color: $text-color-primary;
+    padding-left: 16px;
+    
+
+    &__heading {
+        position: relative;
+        margin-top: 0;
+        padding-top: 24px;
+        font-size: $font-size--h1;
+        margin-bottom: 24px;
+    }
+
+    &__heading::before {
+        content: '';
+        position: absolute;
+        background-image: url('../img/highlight-heading.svg');
+        background-repeat: no-repeat;
+        width: 4px;
+        height: 40px;
+        top: 16px;
+        left: -16px;
+    }
+
+    &__menu-navigation {
+        margin-bottom: 24px;
+    }
+
+    &__menu {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        flex-grow: 1;
+        overflow: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    &__menu::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    }
+
+    &__menu-item {
+        white-space: nowrap;
+        list-style-type: none;
+        margin-right: 19px;
+        font-weight: $font-weight--medium;
+        height: 40px;
+        min-height: 40px;
+        padding: 8px 9px 8px 0;
+        box-sizing: border-box;
+    }
+
+    &__link {
+        font-size: $font-size-secondary;
+        text-decoration: none;
+        color: $text-color-secondary;
+        height: 40px;
+        min-height: 40px;
+    }
+
+    &__link:visited, &__link:hover, &__link:active {
+        background-color: $background-color-secondary;
+        border: 2px solid $border-color;
+        border-radius: 6px;
+        padding: 8px 9px 8px 16px;
+        box-sizing: border-box;
+    }
+
+    @media (min-width: 1440px) {
+        margin-left: 305px;
+        padding-left: 35px;
+    }
+}
